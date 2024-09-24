@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 装饰性的小图可以使用伪元素创建
+        用css模拟出标签效果
+        ::before在父元素内容的最前添加伪元素
+        ::after在父元素内容最后添加一个伪元素
+        
+        %必须设置content属性才能生效
+        需要加""
+        伪元素默认行内元素*/
+        .father{
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+        }
+        .father::before{
+            content: "123";
+            color: red; 
+        }
+        .father::after{
+            content: "789";
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            display: block;
+            /* 行内元素不改变行内 */
+        }
+    </style>
+</head>
+<body>
+    <div class="father">456</div>
+    <!-- 写出123456789 -->
+    
+
+</body>
+</html>
